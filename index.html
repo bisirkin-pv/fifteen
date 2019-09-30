@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fifteen game</title>
+    <link rel="stylesheet" href="/static/css/game.css">
+    <script src="static/js/game.js"></script>
+    <script>
+    window.onload = function () {
+            var fifteenGame = FifteenGame;
+        console.log(fifteenGame.getVersion())
+        var tbl = document.getElementById('table_game')
+        fifteenGame.init(tbl)
+        fifteenGame.addListener('#result_block button')
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Fifteen game</h1>
+    </header>
+    <div class="container">
+        <table id="table_game">
+            
+        </table>
+        <div id="result_block">
+            <div id="count_block">Count move: 0</div>
+            <button class="btn">START</button>
+        </div>
+    </div>
+    <footer>
+        
+    </footer>
+</body>
+</html>
