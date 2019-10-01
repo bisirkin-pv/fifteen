@@ -13,9 +13,12 @@ html, body{
     border-radius: 10px;
     font-size: 1.2em;
 }
-.zero_block{
+#table_game .zero_block{
     border: none!important;
     color: #fff;
+}
+#table_game .active_block{
+    background: #ccc
 }
 #count_block{
     height: 36px;
@@ -23,6 +26,7 @@ html, body{
 }
 #table_game{
     border: 1px black solid;
+    cursor: pointer;
 }
 #table_game tr td{
     height: 84px;

@@ -10,8 +10,10 @@
             var fifteenGame = FifteenGame;
         console.log(fifteenGame.getVersion())
         var tbl = document.getElementById('table_game')
-        fifteenGame.init(tbl)
-        fifteenGame.addListener('#result_block button')
+        var start_button = document.querySelector('#result_block button')
+        var cnt = document.getElementById('count_block')
+        var msg = document.getElementById('message_block')
+        fifteenGame.init(tbl, start_button, cnt, msg)
     }
     </script>
 </head>
@@ -26,6 +28,7 @@
         <div id="result_block">
             <div id="count_block">Count move: 0</div>
             <button class="btn">START</button>
+            <div id="message_block"></div>
         </div>
     </div>
     <footer>
