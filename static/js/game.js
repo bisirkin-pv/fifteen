@@ -1,7 +1,7 @@
 (function (){    
     'use strict'
     
-    let version = '1.0.0'
+    let version = '1.0.1'
         ,lastUpdateDate = '01.10.2019'
     
     var state = []
@@ -143,7 +143,7 @@
                     state[current_id] = state[active_id]
                     state[active_id] = 0
                     
-                    _change_counterHTML(count_move++)
+                    _change_counterHTML(++count_move)
                     
                     if(_check_win()){
                         msg.innerHTML = 'You win!'
