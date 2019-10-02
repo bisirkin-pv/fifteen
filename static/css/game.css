@@ -15,7 +15,6 @@ html, body{
 }
 #table_game .zero_block{
     border: none!important;
-    color: #fff;
 }
 #table_game .active_block{
     background: #ccc
