@@ -1,8 +1,8 @@
 (function (){    
     'use strict'
     
-    let version = '1.0.1'
-        ,lastUpdateDate = '01.10.2019'
+    let version = '1.0.2'
+        ,lastUpdateDate = '02.10.2019'
     
     var state = []
         ,table = undefined
