@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Fifteen game</title>
-    <link rel="stylesheet" href="/static/css/game.css">
-    <script src="static/js/game.js"></script>
-    <script>
-    window.onload = function () {
-            var fifteenGame = FifteenGame;
-        console.log(fifteenGame.getVersion())
-        var tbl = document.getElementById('table_game')
-        var start_button = document.querySelector('#result_block button')
-        var cnt = document.getElementById('count_block')
-        var msg = document.getElementById('message_block')
-        fifteenGame.init(tbl, start_button, cnt, msg)
-    }
-    </script>
-</head>
-<body>
-    <header>
-        <h1>Fifteen game</h1>
-    </header>
-    <div class="container">
-        <table id="table_game">
-            
-        </table>
-        <div id="result_block">
-            <div>Count move: <span id="count_block">0</span></div>
-            <button class="btn">START</button>
-            <div id="message_block"></div>
-        </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bisirkin-pv/fifteen/static/css/game.css" />
+    <script src="https://cdn.jsdelivr.net/gh/bisirkin-pv/fifteen/static/js/game.js"></script>
+  </head>
+  <body>
+    <h1>Fifteen game!</h1>
+    <table id="table_game"></table>
+    <div id="result_block">
+      <div id="count_block">Count move: 0</div>
+      <button class="btn">START</button>
+      <div id="message_block"></div>
     </div>
-    <footer>
-        
-    </footer>
-</body>
+
+    <script>
+      function loadingGame() {
+        var fifteenGame = FifteenGame;
+        var tbl = document.getElementById("table_game");
+        var start_button = document.querySelector("#result_block button");
+        var cnt = document.getElementById("count_block");
+        var msg = document.getElementById("message_block");
+        fifteenGame.init(tbl, start_button, cnt, msg);
+      }
+
+      setTimeout(() => {
+        loadingGame();
+      }, 100);
+    </script>
+  </body>
 </html>
